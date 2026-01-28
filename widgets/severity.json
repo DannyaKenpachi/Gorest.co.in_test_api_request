@@ -1,0 +1,1 @@
+[{"uid":"a210b7745a622a46","name":"Проверка обновление данных о пользователе","time":{"start":1769634486946,"stop":1769634486946,"duration":0},"status":"broken","severity":"normal"},{"uid":"e5f29998cf393929","name":"Проверка списка пользователей","time":{"start":1769634486808,"stop":1769634486917,"duration":109},"status":"failed","severity":"normal"}]
