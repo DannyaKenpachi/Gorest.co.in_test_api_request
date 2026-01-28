@@ -16,7 +16,7 @@ def api_client():
     return headers, base_url
 
 @pytest.fixture(scope='session')
-def test_create_new_user(api_client):
+def create_new_user(api_client):
     test_number = random.randint(0, 999)
     headers, base_url = api_client
     url = f"{base_url}/users"
@@ -30,4 +30,5 @@ def test_create_new_user(api_client):
     assert response.ok
     result = response.json()
     assert len(result) > 0
-    return result["id"]
+    yield result["id"]
+    requests.delete(f"{base_url}/users/{user_id}", headers=headers)
