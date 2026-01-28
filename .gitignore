@@ -1,0 +1,18 @@
+# Python (кэш и скомпилированные файлы)
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+
+# Виртуальное окружение (если создаешь venv в папке проекта)
+venv/
+env/
+.env
+
+# PyCharm / VS Code (настройки редактора)
+.idea/
+.vscode/
+
+# Allure (отчеты и временные файлы)
+allure-results/
+allure-report/
