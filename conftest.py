@@ -31,4 +31,4 @@ def create_new_user(api_client):
     result = response.json()
     assert len(result) > 0
     yield result["id"]
-    requests.delete(f"{base_url}/users/{user_id}", headers=headers)
+    requests.delete(f"{base_url}/users/{result["id"]}", headers=headers)

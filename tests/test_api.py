@@ -17,11 +17,11 @@ def test_list_users(api_client):
         assert len(result) > 0
 
 @allure.title("Проверка обновление данных о пользователе")
-def test_update_user(api_client, test_create_new_user):
+def test_update_user(api_client, create_new_user):
     with allure.step("Подготовка данных"):
         test_number = random.randint(0, 999)
         headers, base_url = api_client
-        url = f"{base_url}/users/{test_create_new_user}"
+        url = f"{base_url}/users/{create_new_user}"
         new_user = {
             "name":"Nezhen",
             "gender":"male",
@@ -33,6 +33,5 @@ def test_update_user(api_client, test_create_new_user):
     with allure.step("Проверка ответа"): 
         assert response.ok
         result = response.json()
-        print(result)
         assert len(result) > 0
 
